@@ -1,22 +1,20 @@
-public class IT26101424Lab9Q3 {
+import java.util.Scanner;
 
-    public static int add(int a, int b) {
-        return a + b;
-    }
+public class IT26101424Lab9Q2 {
 
-    public static int multiply(int a, int b) {
-        return a * b;
-    }
-
-    public static int square(int n) {
-        return n * n;
+    public static double circleArea(double radius) {
+        return Math.PI * Math.pow(radius, 2);
     }
 
     public static void main(String[] args) {
-        int result1 = square(add(multiply(3, 4), multiply(5, 7)));
-        int result2 = add(square(add(4, 7)), square(add(8, 3)));
+        Scanner input = new Scanner(System.in);
 
-        System.out.println("Result of (3 * 4 + 5 * 7)²   : " + result1);
-        System.out.println("Result of (4 + 7)² + (8 + 3)² : " + result2);
+        System.out.print("Enter the radius of the circle: ");
+        double radius = input.nextDouble();
+
+        double area = circleArea(radius);
+
+        System.out.println("The area of the circle with radius " + radius + " is : " + area);
+
     }
 }
